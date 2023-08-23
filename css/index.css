@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.Page {
+.Pages {
     width: 100%;
     height: 1000px;
     /* background: green; */
@@ -9,13 +9,12 @@
     overflow:hidden;
 }
 
-img { z-index: 1; width:100%; height:1000px; position: absolute;}
+img[alt="sea"] { z-index: 1; width:100%; height:1000px; position: absolute;}
 
 .section {
     z-index: 2;
     margin:0 auto;
     width:1600px;
-    height:900px;
     /* background-color: rgba(255, 251, 0, 0.5); */
     text-align: center;
     display:flex;
@@ -45,41 +44,55 @@ img { z-index: 1; width:100%; height:1000px; position: absolute;}
 }
 
 /* 3페이지 */
+
 .Page:nth-of-type(4) .section{
     justify-content: space-between;
 }
 
 .Page:nth-of-type(4) .section ul{
-    width:100%;
-    height:32px;
+    width:80%;
     display:flex;
     flex-flow:row nowrap;
     justify-content: space-around;
+    margin:0 auto;
 }
 
 .Page:nth-of-type(4) .section li {
     opacity: 0.8;
     transition: 0.2s;
     cursor:pointer;
+    padding:20px;
+    border: 1px solid #e6e6e6;
+    width:100%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 .Page:nth-of-type(4) .section li:hover {
     opacity:1; font-weight: 600;
 }
 
-.Page:nth-of-type(4) .section li.choosed {opacity:1; font-weight: 600;}
+.Page:nth-of-type(4) .section li.choosed {opacity:1; font-weight: 600; border-top: rgba(0,0,0,0);}
 
-#board {
-    width:100%;
-    height:95%;
-    background-color: aqua;
+.board {
+    width:70%;
+    /* background-color: aqua; */
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: space-between;
+    margin:0 auto;
+    padding:50px 0;
+    display:none;
 }
+
+.choosed {display:block;}
 
 /* 4페이지 */
 
 .group {
     display:flex;
     flex-flow:row wrap;
+    align-items: center;
 }
 
 .left img{
@@ -96,6 +109,9 @@ img { z-index: 1; width:100%; height:1000px; position: absolute;}
     margin-left:60px;
 }
 
+.Page:nth-of-type(6) .group {
+    margin:80px 0 0 0;
+}
 .Page:nth-of-type(6) .section {
     justify-content: space-around;
 }
@@ -105,7 +121,7 @@ img { z-index: 1; width:100%; height:1000px; position: absolute;}
 }
 
 .after {
-    height: 45px; background-color: #0084ff; width:100%;
+    height: 45px; background-color: #8FBDD9; width:100%;
     margin-top: -40px;
 }
 
@@ -119,3 +135,26 @@ img { z-index: 1; width:100%; height:1000px; position: absolute;}
     display:flex;
     justify-content: flex-end;
 }
+
+img[alt="reason"] {width:200px; height:200px; position:unset; margin-right: 50px;}
+
+.reasons {
+    width:100%;
+    display:flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    margin:50px 0;
+}
+
+
+.resolve ul {
+    display:flex;
+    justify-content: center;
+}
+
+.resolve li {
+    margin:0 20px;
+}
+
+.choosed {display:block;}

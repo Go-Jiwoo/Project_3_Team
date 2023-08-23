@@ -1,4 +1,27 @@
-let gainList = document.getElementsByClassName("Page")[3].children[0].children[1].children;
+const content = document.querySelectorAll('.menu');
+const subContent = document.querySelectorAll('.board')
+const ACTIVE = "active"
 
-console.log(gainList);
 
+content.forEach(function(contents){
+    contents.addEventListener("click",function(){
+
+        subContent.forEach(function(subContents){
+            subContents.classList.remove(ACTIVE);
+        })
+        content.forEach(function(contents){
+            contents.classList.remove(ACTIVE);
+        });
+        contents.classList.add(ACTIVE);
+    })
+    contents.classList.remove(ACTIVE);
+})
+
+subContent.forEach(function(subContents){
+    subContents.addEventListener("click",function(){
+        subContent.forEach(function(subContents){
+            subContents.classList.remove(ACTIVE);
+        })
+        subContents.classList.add(ACTIVE);
+    })
+})
