@@ -7,16 +7,17 @@
     <title>SavetheEarth</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 
 <body>
 
     <div class="Pages">
-        <img src="img/main.jpg" alt="sea">
+        <img src="img/main.jpg" alt="sea1">
         <div class="section">
 
             <p class="title white">해양 오염이란?</p>
-            <p class="subtitle white">Marine Pollution</p><br><br><br>
+            <p class="subtitle white">Marine Pollution</p><br><br>
             <p class="substance white">
                 해양에 화학물질 또는 작은 조각(먼지)들이 들어가 일으키는 해로운 효과입니다.<br>
                 잠재적인 독성 화학물질이 작은 입자에 달라붙어 바다생물에 흡수됩니다.</p>
@@ -24,13 +25,13 @@
     </div>
 
     <div class="Pages">
-        <img src="img/main2.jpg" alt="sea">
+        <img src="img/main2.jpg" alt="sea2">
         <div class="section">
             <div class="left">
                 <p class="subtitle white">매년 바다에 버려지는 해양 폐기물</p>
-                <p class="title white">약 800만톤</p><br><br>
+                <p class="title white">약 <span id="number" data-target="800">800</span>만톤</p><br><br>
                 <p class="subtitle white">매년 사망하는 해양 생물</p>
-                <p class="title white">약 10만 마리</p>
+                <p class="title white">약 <span id="number" data-target="10">10</span>만 마리</p>
             </div>
             <br><br><br><br><br><br><br>
             <div class="right">
@@ -55,7 +56,7 @@
 
     <div class="Page">
         <div class="section">
-            <div class="board choosed">
+            <div class="board" style="display:block">
                 <p class="title">1차 미세플라스틱 발생</p>
                 <div class="reasons">
                     <div class="group">
@@ -86,13 +87,22 @@
                 1차, 2차 미세플라스틱을 합쳐 통상 "미세 플라스틱"이라고 부릅니다.</p>
                 <br><br>
             </div>
-            <div class="board">
-                <img src="img/r3.svg" alt="reason">
-                <img src="img/r6.svg" alt="reason">
-                <img src="img/r7.svg" alt="reason">
+            <div class="board column">
+                <div>
+                    <img src="img/r3.svg" alt="reason">
+                    <p class="subtitle">플랑크톤이 먹이로 오인하고 섭취</p>
+                </div>
+                <div>
+                    <img src="img/r6.svg" alt="reason">
+                    <p class="subtitle">플랑크톤을 <br>작은 물고기가 먹음</p>
+                </div>
+                <div>
+                    <img src="img/r7.svg" alt="reason">
+                    <p class="subtitle">작은 물고기를 큰 물고기가 먹음</p>
+                </div>
             </div>
             <ul>
-                <li class="menu subtitle choosed">미세 플라스틱 발생</li>
+                <li class="menu subtitle" style="font-weight:600" style="opacity: 1">미세 플라스틱 발생</li>
                 <li class="menu subtitle">해양 생물이 섭취</li>
                 <li class="menu subtitle">돌아오는 화학물질</li>
             </ul>
