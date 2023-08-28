@@ -9,6 +9,10 @@
     overflow:hidden;
 }
 
+.Page {
+    height:auto;
+}
+
 img[alt="sea1"] {animation: move 3s; position:absolute; z-index:1;width:100%; height:1000px;}
 
 img[alt="sea2"] { z-index: 1; width:100%; height:1000px; position: absolute;}
@@ -56,9 +60,10 @@ img[alt="sea2"] { z-index: 1; width:100%; height:1000px; position: absolute;}
 
 /* 3페이지 */
 
-.Page:nth-of-type(4) .section{
+.Page:nth-of-type(4){
     justify-content: space-between;
-    scale: 0.8;
+    transform:scale(0.8);
+    transform-origin: top;
 }
 
 .Page:nth-of-type(4) .section ul{
@@ -85,10 +90,10 @@ img[alt="sea2"] { z-index: 1; width:100%; height:1000px; position: absolute;}
     opacity:1; font-weight: 600;
 }
 
-/* .Page:nth-of-type(4) .column {
+.Page:nth-of-type(4) .column {
    display:flex;
-   flex-flow:row nowrap
-} */
+   flex-flow:row nowrap;
+}
 
 .Page:nth-of-type(4) .section li.choosed {opacity:1; font-weight: 600; border-top: rgba(0,0,0,0);}
 
@@ -98,12 +103,15 @@ img[alt="sea2"] { z-index: 1; width:100%; height:1000px; position: absolute;}
     display:flex;
     flex-flow:column wrap;
     justify-content: space-between;
+    align-content: center;
     margin:0 auto;
     padding:50px 0;
     display:none;
 }
 
 .column > div {display:flex; flex-flow:column wrap; align-items: center;}
+
+.column > div img {margin: 0 auto 50px auto;}
 
 .choosed {display:block;}
 
